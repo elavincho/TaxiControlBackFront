@@ -12,6 +12,7 @@
     "build:frontend": "cd frontend && npm run build",
     "start": "NODE_ENV=production node backend/dist/index.js",
     "vercel-build": "npm install --include=dev && npm run build"
+    
   },
   "dependencies": {
     "express": "^4.18.2",

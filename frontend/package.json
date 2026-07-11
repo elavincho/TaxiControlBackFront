@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npx vite --host",
+    "dev": "vite --host",
     "build": "npx vite build",
     "preview": "npx vite preview"
   },
