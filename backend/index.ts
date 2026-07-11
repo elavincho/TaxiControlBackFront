@@ -144,7 +144,10 @@ app.get('/api/health', (req, res) => {
 
 // Servir el frontend en producción
 if (process.env.NODE_ENV === 'production') {
+  // La ruta correcta en Vercel
   const frontendPath = path.join(__dirname, '../../frontend/dist');
+  console.log('📁 Serving frontend from:', frontendPath);
+  
   app.use(express.static(frontendPath));
   app.get('*', (req, res) => {
     res.sendFile(path.join(frontendPath, 'index.html'));
