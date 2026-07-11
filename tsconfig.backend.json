@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "outDir": "./dist/backend",
+    "rootDir": "./backend",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": false,
+    "sourceMap": true
+  },
+  "include": ["backend/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "frontend/**/*",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}

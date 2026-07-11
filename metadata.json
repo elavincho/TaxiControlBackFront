@@ -1,0 +1,6 @@
+{
+  "name": "Taxi Control de Ingresos y Gastos",
+  "description": "Aplicación para el control diario de viajes, gastos de combustible (GNC y Nafta), mantenimiento de taxis, estadísticas detalladas y alertas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

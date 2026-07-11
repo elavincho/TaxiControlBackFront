@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tus estilos personalizados van aquí */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Variables CSS personalizadas */
+:root {
+  --bg-app: #09090b;
+  --bg-card: #121214;
+  --bg-card-hover: #1c1c1f;
+  --border-card: #27272a;
+  --border-card-sub: #1c1c1f;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --bg-input: #09090b;
+}
+
+:root.light {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-card: #e2e8f0;
+  --border-card-sub: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --bg-input: #ffffff;
+}
+
+
+:root {
+  /* DARK THEME (Default) */
+  --bg-app: #09090b; /* zinc-950 */
+  --bg-card: #121214; /* zinc-900 / dark gray */
+  --bg-card-hover: #1c1c1f; /* zinc-800 */
+  --border-card: #27272a; /* zinc-800 */
+  --border-card-sub: #1c1c1f; /* zinc-900 */
+  --text-primary: #f4f4f5; /* zinc-100 */
+  --text-secondary: #a1a1aa; /* zinc-400 */
+  --text-muted: #71717a; /* zinc-500 */
+  --bg-input: #09090b; /* zinc-950 */
+}
+
+:root.light {
+  /* LIGHT THEME */
+  --bg-app: #f8fafc; /* slate-50 */
+  --bg-card: #ffffff; /* white */
+  --bg-card-hover: #f1f5f9; /* slate-100 */
+  --border-card: #e2e8f0; /* slate-200 */
+  --border-card-sub: #f1f5f9; /* slate-100 */
+  --text-primary: #0f172a; /* slate-900 */
+  --text-secondary: #475569; /* slate-600 */
+  --text-muted: #94a3b8; /* slate-400 */
+  --bg-input: #ffffff; /* white */
+}
+
+/* AUTOMATIC THEME OVERRIDES */
+
+/* Main backgrounds */
+#applet-viewport,
+#login-view,
+#register-view {
+  background-color: var(--bg-app) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Card components & headers */
+#applet-viewport .bg-white,
+#login-view .bg-white,
+#register-view .bg-white,
+#perfil-view .bg-white,
+#dashboard-view .bg-white,
+#viajes-view .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+/* Text overrides */
+#applet-viewport .text-slate-900,
+#login-view .text-slate-900,
+#register-view .text-slate-900,
+.text-slate-900,
+.text-slate-950 {
+  color: var(--text-primary) !important;
+}
+
+#applet-viewport .text-slate-600,
+#applet-viewport .text-slate-700,
+#applet-viewport .text-slate-800,
+#login-view .text-slate-600,
+#login-view .text-slate-700,
+#register-view .text-slate-600,
+.text-slate-600,
+.text-slate-700 {
+  color: var(--text-secondary) !important;
+}
+
+#applet-viewport .text-slate-400,
+#applet-viewport .text-slate-500,
+#login-view .text-slate-400,
+#login-view .text-slate-500,
+#register-view .text-slate-400,
+.text-slate-400,
+.text-slate-500 {
+  color: var(--text-muted) !important;
+}
+
+/* Slate background elements */
+#applet-viewport .bg-slate-50,
+#login-view .bg-slate-50,
+#register-view .bg-slate-50,
+.bg-slate-50 {
+  background-color: var(--bg-app) !important;
+}
+
+/* Table rows & list cards hover */
+#applet-viewport .hover\:bg-slate-50\/40:hover,
+#applet-viewport .hover\:bg-slate-50:hover,
+.hover\:bg-slate-50\/40:hover,
+.hover\:bg-slate-50:hover {
+  background-color: var(--bg-card-hover) !important;
+}
+
+#applet-viewport .bg-slate-50\/50,
+#applet-viewport .bg-slate-50\/40,
+.bg-slate-50\/50,
+.bg-slate-50\/40 {
+  background-color: var(--bg-app) !important;
+}
+
+/* Borders and lines */
+#applet-viewport .border-slate-200,
+#login-view .border-slate-200,
+#register-view .border-slate-200,
+.border-slate-200 {
+  border-color: var(--border-card) !important;
+}
+
+#applet-viewport .border-slate-100,
+.border-slate-100 {
+  border-color: var(--border-card-sub) !important;
+}
+
+#applet-viewport .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+.divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--border-card-sub) !important;
+}
+
+#applet-viewport .divide-slate-200 > :not([hidden]) ~ :not([hidden]),
+.divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--border-card) !important;
+}
+
+/* Inputs, textareas, selection boxes */
+#applet-viewport input,
+#applet-viewport select,
+#applet-viewport textarea,
+#login-view input,
+#login-view select,
+#register-view input,
+#register-view select,
+input.bg-slate-50,
+select.bg-slate-50 {
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-card) !important;
+}
+
+/* Placeholder styles */
+::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.8;
+}
+
+/* Modal overlays and inner wrapper overrides */
+#applet-viewport .bg-slate-950\/80,
+.bg-slate-950\/80 {
+  background-color: rgba(9, 9, 11, 0.8) !important;
+  backdrop-filter: blur(4px);
+}
+
+#applet-viewport .bg-white.text-slate-900,
+.bg-white.text-slate-900,
+.bg-white.text-slate-900 {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Custom ambient background overrides for dark/light contrast */
+#applet-viewport .bg-yellow-400\/5,
+.bg-yellow-400\/5 {
+  opacity: 0.15;
+}
+
+.w-h-logo {
+  width: 50px;
+  height: 50px;
+}
