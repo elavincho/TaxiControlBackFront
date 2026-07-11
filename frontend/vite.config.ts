@@ -3,34 +3,23 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-    plugins: [react()],
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, './src'),
-        },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    css: {
-        postcss: './postcss.config.js',
-        preprocessorOptions: {
-            css: {
-                additionalData: `@import "tailwindcss";`,
-            },
-        },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        secure: false,
+      },
     },
-    server: {
-        port: 5173,
-        host: true,
-        open: true,
-        proxy: {
-            '/api': {
-                target: 'http://localhost:3000',
-                changeOrigin: true,
-                secure: false,
-            },
-        },
-    },
-    build: {
-        outDir: 'dist',
-        sourcemap: true,
-    },
+  },
 });
